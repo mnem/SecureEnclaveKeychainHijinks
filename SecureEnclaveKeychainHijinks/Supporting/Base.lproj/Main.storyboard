@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecureEnclaveKeychainHijinks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wtd-Ve-BGQ">
+                                <rect key="frame" x="125" y="338" width="164" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wE-7T-AHG">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="30"/>
+                                        <state key="normal" title="Dump keychain"/>
+                                        <connections>
+                                            <action selector="handleDumpKeychain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lOO-4C-xoT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BD-se-FbK">
+                                        <rect key="frame" x="0.0" y="38" width="164" height="30"/>
+                                        <state key="normal" title="Create transient key"/>
+                                        <connections>
+                                            <action selector="handleCreateTransientKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t42-Qx-FeZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbJ-Hk-IP4">
+                                        <rect key="frame" x="0.0" y="76" width="164" height="30"/>
+                                        <state key="normal" title="Exercise transient key"/>
+                                        <connections>
+                                            <action selector="handleTransientExercise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lx2-dV-aSH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-H7-zgS">
+                                        <rect key="frame" x="0.0" y="114" width="164" height="30"/>
+                                        <state key="normal" title="Create permanent key"/>
+                                        <connections>
+                                            <action selector="handleCreatePermanenttKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yUG-zC-bwE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXq-dO-aKk">
+                                        <rect key="frame" x="0.0" y="152" width="164" height="30"/>
+                                        <state key="normal" title="Exercise permanent key"/>
+                                        <connections>
+                                            <action selector="handlePermanentExercise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="86N-Ju-Fnu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khR-S5-QaH">
+                                        <rect key="frame" x="0.0" y="190" width="164" height="30"/>
+                                        <state key="normal" title="Delete all items"/>
+                                        <connections>
+                                            <action selector="handleDeleteAllItems:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pN3-rN-obp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wtd-Ve-BGQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="68i-Sk-g6d"/>
+                            <constraint firstItem="wtd-Ve-BGQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mVJ-cJ-8Ze"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="126"/>
+        </scene>
+    </scenes>
+</document>
